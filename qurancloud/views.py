@@ -26,5 +26,4 @@ class QuranEditionDetailView(RetrieveAPIView):
     def get_queryset(self):
         edition = self.kwargs.get("edition")
         data = Ayah.objects.filter(edition__identifier=edition)
-        print(data)
         return data
